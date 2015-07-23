@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:xe</property>
+  <property name="hibernate.connection.username">system</property>
+  <property name="hibernate.connection.password">India3380</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+  <property name="hibernate.default_schema">system</property>
+  <property name="show_sql">true</property>
+  <property name="hbm2ddl.auto">update</property>
+  
+  <property name="cache.use_second_level_cache">true</property>
+  <property name="cache.use_query_cache">true</property>
+  <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+  
+  <mapping class="com.user.model.UserDetails"></mapping>
+  <mapping class="com.user.model.DBUser"></mapping>
+  <mapping class="com.simplecollection.example.Address"></mapping>
+  <mapping class="com.simplecollection.example.UserInfo"></mapping>
+  <mapping class="com.compositePrimaryKey.option1.UserIdOption1"></mapping>
+  <mapping class="com.compositePrimaryKey.option1.UserOption1"></mapping>
+  <mapping class="com.compositePrimaryKey.option2.UserOption2"></mapping>
+  <mapping class="com.compositePrimaryKey.option2.UserIdOption2"></mapping>
+  <mapping class="com.compositePrimaryKey.option3.AddressOption3"></mapping>
+  <mapping class="com.compositePrimaryKey.option3.UserIdOption3"></mapping>
+  <mapping class="com.compositePrimaryKey.option3.UserOption3"></mapping>
+  <mapping class="com.collection.simple.elementCollection.UserCollOption1" />
+  <mapping class="com.collection.simple.elementCollection.AddressCollOption1" />
+  <mapping class="com.association.onotoone.UserOneToOne" />
+  <mapping class="com.association.onotoone.VehicleOneToOne" />
+  
+  <mapping class="com.association.onetomany.option1.UserOneToMany" />
+  <mapping class="com.association.onetomany.option1.VehicleOneToMany" />
+  
+  <mapping class="com.association.onetomany.option2.UserOneToManyOption2" />
+  <mapping class="com.association.onetomany.option2.VehicleOneToManyOption2" />
+  
+  <mapping class="com.association.manytomany.VehicleMToM" />
+  <mapping class="com.association.manytomany.UserMToM" />
+  
+  <mapping class="com.inheritance.singleTableStrategy.FourWheelerInheritanceBasic" />
+  <mapping class="com.inheritance.singleTableStrategy.VehicleInheritanceBasic" />
+  <mapping class="com.inheritance.singleTableStrategy.TwoWheelerInheritanceBasic" />
+  
+  <mapping class="com.inheritance.tablePerClass.VehicleTablePerClass" />
+  <mapping class="com.inheritance.tablePerClass.FourWheelTablePerClass" />
+  <mapping class="com.inheritance.tablePerClass.TwoWheelTablePerClass" />
+  
+  <mapping class="com.inheritance.joined.FourWheelJoined" />
+  <mapping class="com.inheritance.joined.VehicleJoined" />
+  <mapping class="com.inheritance.joined.TwoWheelerJoined" />
+  
+  <mapping class="com.criteria.query.Department" />
+  <mapping class="com.criteria.query.Employee" />
+  <mapping class="com.criteria.query.Address" />
+  
+  <mapping class="com.secondlevel.cache.UserCache" />
+  
+  
+  <mapping class="com.collection.list.AddressList" />
+  <mapping class="com.collection.list.UserList" />
+</session-factory>
+</hibernate-configuration>
